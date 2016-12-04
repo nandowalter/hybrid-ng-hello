@@ -27,10 +27,12 @@
     "zone.js": "^0.6.25"
   },
   "devDependencies": {
+    "@types/angular": "^1.5.20",
     "@types/core-js": "^0.9.34",
     "@types/jasmine": "^2.5.38",
     "@types/node": "^6.0.45",
     "angular-route": "^1.5.9",
+    "angular-ui-router": "^1.0.0-beta.3",
     "angular2-template-loader": "^0.4.0",
     "awesome-typescript-loader": "^2.2.4",
     "css-loader": "^0.23.1",
@@ -45,6 +47,8 @@
     "rimraf": "^2.5.2",
     "style-loader": "^0.13.1",
     "typescript": "^2.0.3",
+    "ui-router-ng1-to-ng2": "^1.0.15",
+    "ui-router-ng2": "^1.0.0-beta.3",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.0"

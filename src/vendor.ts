@@ -1,6 +1,6 @@
 // AngularJs 1.x
 require('angular');
-require('angular-route');
+require('angular-ui-router');
 // Angular2
 import '@angular/platform-browser';
 import '@angular/core';

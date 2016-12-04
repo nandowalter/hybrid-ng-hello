@@ -1,3 +1,3 @@
 (function(){
-    angular.module('hello', ['ngRoute']);
+    angular.module('hello', ['ui.router', 'ui.router.upgrade']);
 })();
