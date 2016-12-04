@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
-import { AppComponent } from './app.component';
+import { HelloTwoComponent } from './helloTwo/helloTwo.component';
+import { NameService } from './name.service.def';
+import { NameMemoryService } from './nameMemory/nameMemory.service';
+
 @NgModule({
   imports: [
     BrowserModule
   ],
+  providers: [
+    { provide: NameService, useClass: NameMemoryService }
+  ],
   declarations: [
-    AppComponent
-  ]/*,
-  bootstrap: [ AppComponent ]*/
+    HelloTwoComponent
+  ]
 })
-export class AppModule { }
+export class AppModule {
+  ngDoBootstrap() {}
+}
