@@ -1,9 +1,11 @@
 import { enableProdMode } from '@angular/core';
-import { AppModule } from './app/app.module';
 import { UpgradeAdapter } from '@angular/upgrade';
 import { AppUpgradeAdapter } from './app/appUpgradeAdapter';
+import { AppRouteConfig } from './app/route/AppRouteConfig';
 
 declare var angular: any;
+var adapter: UpgradeAdapter;
+const moduleName = 'hello';
 
 if (process.env.ENV === 'production') {
   enableProdMode();
@@ -12,4 +14,11 @@ if (process.env.ENV === 'production') {
 //AngularJs 1.x application
 require('./ng1-app');
 
-new AppUpgradeAdapter();
+adapter = new AppUpgradeAdapter(moduleName).adapter;
+
+//Bootstrap app
+angular.element(document.body).ready(function() {
+  adapter.bootstrap(document.body, [moduleName]);
+}.bind(this));
+
+new AppRouteConfig(adapter, moduleName);
