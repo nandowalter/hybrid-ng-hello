@@ -25,21 +25,11 @@ export class AppUpgradeAdapter {
         config.$inject = ['$stateProvider'];
         function config($stateProvider: any) {
             $stateProvider.state({
-                name: 'index', 
-                url: '',
-                template: rootTemplate
-            }).state({
-                name: 'helloOne', 
-                url: '/ng1',
-                component: 'helloOne'
-            }).state({
                 name: 'helloTwo', 
                 url: '/ng2',
                 component: HelloTwoComponent
             });
         }
-
-
 
 
         angular.element(document.body).ready(function() {
